@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T00:41:42.533Z",
+  "generated_at": "2026-06-01T02:07:39.603Z",
   "modules": [
     {
       "id": "M1",
@@ -25,9 +25,13 @@
         "npm run build succeeds",
         "The app boots to an empty board shell at /"
       ],
-      "status": "pending",
-      "state": "queued",
-      "depends_on": []
+      "status": "in_progress",
+      "state": "working",
+      "depends_on": [],
+      "pr_number": 1,
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/1",
+      "claimed_by": "atlas-bot",
+      "worktree_branch": "feat/S1.1-scaffold-vite-react-app"
     },
     {
       "id": "S1.2",
@@ -183,9 +187,13 @@
       "title": "Scaffold Vite + React + router",
       "module": "Foundation",
       "phase": 1,
-      "status": "pending",
-      "state": "queued",
-      "events": []
+      "status": "in_progress",
+      "state": "working",
+      "events": [],
+      "pr_number": 1,
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/1",
+      "claimed_by": "atlas-bot",
+      "worktree_branch": "feat/S1.1-scaffold-vite-react-app"
     },
     {
       "id": "T1.2.1",
