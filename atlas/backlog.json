@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T14:31:59.856Z",
+  "generated_at": "2026-06-01T14:32:32.288Z",
   "modules": [
     {
       "id": "M1",
@@ -121,7 +121,7 @@
       "actual_ai_hours": 0.01,
       "needs_human_review": {
         "kind": "qa",
-        "since": "2026-06-01T14:31:59.856Z"
+        "since": "2026-06-01T14:32:32.287Z"
       }
     },
     {
@@ -146,7 +146,7 @@
       "actual_ai_hours": 0.01,
       "needs_human_review": {
         "kind": "qa",
-        "since": "2026-06-01T14:31:59.856Z"
+        "since": "2026-06-01T14:32:32.288Z"
       }
     },
     {
@@ -171,7 +171,7 @@
       "actual_ai_hours": 0.01,
       "needs_human_review": {
         "kind": "qa",
-        "since": "2026-06-01T14:31:59.856Z"
+        "since": "2026-06-01T14:32:32.288Z"
       }
     },
     {
@@ -233,8 +233,8 @@
         "The dragged move persists after reload",
         "The S2.2 ◀▶ button/keyboard move still works"
       ],
-      "status": "merged",
-      "state": "in_review",
+      "status": "pending",
+      "state": "queued",
       "depends_on": [
         "S2.2"
       ],
@@ -250,16 +250,7 @@
           "pr_url": null,
           "pr_number": null
         }
-      ],
-      "pr_number": 8,
-      "merged_at": "2026-06-01T14:22:05Z",
-      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/8",
-      "claimed_by": "ShingShen2003",
-      "actual_ai_hours": 0.02,
-      "needs_human_review": {
-        "kind": "qa",
-        "since": "2026-06-01T14:31:59.856Z"
-      }
+      ]
     },
     {
       "id": "S1.4",
@@ -288,9 +279,9 @@
           "pr_number": null
         }
       ],
-      "pr_number": 9,
-      "merged_at": "2026-06-01T14:31:08Z",
-      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/9",
+      "pr_number": 10,
+      "merged_at": "2026-06-01T14:32:14Z",
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/10",
       "claimed_by": "ShingShen2003",
       "actual_ai_hours": 0.01
     }
@@ -430,13 +421,9 @@
       "title": "Drag source + column drop targets (HTML5 DnD)",
       "module": "Board",
       "phase": 2,
-      "status": "merged",
-      "state": "merged",
-      "events": [],
-      "pr_number": 8,
-      "merged_at": "2026-06-01T14:22:05Z",
-      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/8",
-      "claimed_by": "ShingShen2003"
+      "status": "pending",
+      "state": "queued",
+      "events": []
     },
     {
       "id": "T2.5.2",
@@ -444,13 +431,9 @@
       "title": "Immutable moveCardTo(id, column) handler + persistence",
       "module": "Board",
       "phase": 2,
-      "status": "merged",
-      "state": "merged",
-      "events": [],
-      "pr_number": 8,
-      "merged_at": "2026-06-01T14:22:05Z",
-      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/8",
-      "claimed_by": "ShingShen2003"
+      "status": "pending",
+      "state": "queued",
+      "events": []
     },
     {
       "id": "T2.5.3",
@@ -458,13 +441,9 @@
       "title": "Drag affordance styles; verify ◀▶ move still works",
       "module": "Board",
       "phase": 2,
-      "status": "merged",
-      "state": "merged",
-      "events": [],
-      "pr_number": 8,
-      "merged_at": "2026-06-01T14:22:05Z",
-      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/8",
-      "claimed_by": "ShingShen2003"
+      "status": "pending",
+      "state": "queued",
+      "events": []
     },
     {
       "id": "T1.4.1",
@@ -475,9 +454,9 @@
       "status": "merged",
       "state": "merged",
       "events": [],
-      "pr_number": 9,
-      "merged_at": "2026-06-01T14:31:08Z",
-      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/9",
+      "pr_number": 10,
+      "merged_at": "2026-06-01T14:32:14Z",
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/10",
       "claimed_by": "ShingShen2003"
     }
   ]
