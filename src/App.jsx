@@ -2,6 +2,22 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import './styles.css'
 import { useBoard, makeCard, COLUMNS, PRIORITIES, adjacentColumn } from './useBoard.js'
 
+// S3.3 — global keyboard shortcuts. Title for cards created via the N shortcut
+// (the model rejects empty titles). isEditableTarget keeps single-key shortcuts
+// inert while typing — INPUT/TEXTAREA/SELECT (the priority pill is a select!)
+// and contentEditable.
+const NEW_CARD_TITLE = 'New card'
+function isEditableTarget(el) {
+  if (!el) return false
+  const tag = el.tagName
+  return (
+    tag === 'INPUT' ||
+    tag === 'TEXTAREA' ||
+    tag === 'SELECT' ||
+    el.isContentEditable
+  )
+}
+
 // S2.1 — add/edit/delete cards.  S2.2 — move cards between columns (card footer
 // with ◀/▶, edge-disabled by the card's true column position).  S2.3 — editable
 // colored priority badge (a native select that doubles as the pill).
@@ -310,8 +326,11 @@ export default function App() {
   const [query, setQuery] = useState('') // S2.4 — transient, not persisted
   const [selectedId, setSelectedId] = useState(null) // S3.1 — open card modal
 
-  const addCard = (title, column) =>
-    setBoard((b) => ({ ...b, cards: [...b.cards, makeCard(title, column)] }))
+  const addCard = useCallback(
+    (title, column) =>
+      setBoard((b) => ({ ...b, cards: [...b.cards, makeCard(title, column)] })),
+    [setBoard]
+  )
 
   const renameCard = (id, title) =>
     setBoard((b) => ({
@@ -358,6 +377,24 @@ export default function App() {
   // survives a search that would hide its card.
   const selectedCard = board.cards.find((c) => c.id === selectedId) ?? null
   const closeModal = useCallback(() => setSelectedId(null), [])
+  const searchRef = useRef(null) // S3.3 — '/' focuses this
+
+  // S3.3 — global shortcuts: N adds a card to the first column, / focuses search.
+  // Skipped while typing in a field or while the modal is open.
+  useEffect(() => {
+    function onKey(e) {
+      if (isEditableTarget(e.target)) return
+      if (document.querySelector('.modal-overlay')) return
+      if (e.key === 'n' || e.key === 'N') {
+        addCard(NEW_CARD_TITLE, COLUMNS[0])
+      } else if (e.key === '/') {
+        e.preventDefault()
+        searchRef.current?.focus()
+      }
+    }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [addCard])
 
   return (
     <div className="app">
@@ -367,6 +404,7 @@ export default function App() {
           <input
             className="search-input"
             type="search"
+            ref={searchRef}
             placeholder="Search cards…"
             aria-label="Search cards by title"
             value={query}
