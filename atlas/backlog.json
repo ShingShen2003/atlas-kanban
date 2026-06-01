@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T04:18:44.254Z",
+  "generated_at": "2026-06-01T04:19:45.109Z",
   "modules": [
     {
       "id": "M1",
@@ -88,13 +88,14 @@
         "A user can delete a card"
       ],
       "status": "in_progress",
-      "state": "working",
+      "state": "pr_open",
       "depends_on": [
         "S1.2",
         "S1.3"
       ],
-      "claimed_by": "atlas-bot",
-      "worktree_branch": "feat/S2.1-add-edit-delete-cards"
+      "pr_number": 4,
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/4",
+      "claimed_by": "ShingShen2003"
     },
     {
       "id": "S2.2",
@@ -243,10 +244,11 @@
       "module": "Board",
       "phase": 2,
       "status": "in_progress",
-      "state": "working",
+      "state": "pr_open",
       "events": [],
-      "claimed_by": "atlas-bot",
-      "worktree_branch": "feat/S2.1-add-edit-delete-cards"
+      "pr_number": 4,
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/4",
+      "claimed_by": "ShingShen2003"
     },
     {
       "id": "T2.2.1",
