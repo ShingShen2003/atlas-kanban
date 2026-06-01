@@ -8,6 +8,7 @@ import { useBoard, makeCard, COLUMNS, PRIORITIES, adjacentColumn } from './useBo
 function Card({ card, onRename, onDelete, onMove, onSetPriority }) {
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState(card.title)
+  const [dragging, setDragging] = useState(false)
   const idx = COLUMNS.indexOf(card.column)
 
   function commit() {
@@ -18,7 +19,17 @@ function Card({ card, onRename, onDelete, onMove, onSetPriority }) {
   }
 
   return (
-    <article className={`card priority-${card.priority}`}>
+    <article
+      className={`card priority-${card.priority}${dragging ? ' card-dragging' : ''}`}
+      // S2.5 — drag source. Disabled while editing so text selection works.
+      draggable={!editing}
+      onDragStart={(e) => {
+        e.dataTransfer.setData('text/plain', card.id)
+        e.dataTransfer.effectAllowed = 'move'
+        setDragging(true)
+      }}
+      onDragEnd={() => setDragging(false)}
+    >
       <div className="card-main">
         {editing ? (
           <input
@@ -98,8 +109,9 @@ function Card({ card, onRename, onDelete, onMove, onSetPriority }) {
   )
 }
 
-function Column({ title, cards, onAdd, onRename, onDelete, onMove, onSetPriority }) {
+function Column({ title, cards, onAdd, onRename, onDelete, onMove, onSetPriority, onMoveTo }) {
   const [draft, setDraft] = useState('')
+  const [dragOver, setDragOver] = useState(false)
 
   function submit(e) {
     e.preventDefault()
@@ -109,8 +121,27 @@ function Column({ title, cards, onAdd, onRename, onDelete, onMove, onSetPriority
     setDraft('')
   }
 
+  // S2.5 — drop target. preventDefault on dragover is required for drop to fire.
+  function handleDrop(e) {
+    e.preventDefault()
+    setDragOver(false)
+    const id = e.dataTransfer.getData('text/plain')
+    if (id) onMoveTo(id, title)
+  }
+
   return (
-    <section className="column">
+    <section
+      className={`column${dragOver ? ' column-dragover' : ''}`}
+      onDragOver={(e) => {
+        e.preventDefault()
+        e.dataTransfer.dropEffect = 'move'
+        if (!dragOver) setDragOver(true)
+      }}
+      onDragLeave={(e) => {
+        if (!e.currentTarget.contains(e.relatedTarget)) setDragOver(false)
+      }}
+      onDrop={handleDrop}
+    >
       <h2 className="column-title">{title}</h2>
       <div className="column-cards" aria-label={`${title} cards`}>
         {cards.map((c) => (
@@ -172,6 +203,15 @@ export default function App() {
       cards: b.cards.map((c) => (c.id === id ? { ...c, priority } : c)),
     }))
 
+  // S2.5 — drop a card onto a column: set its column directly (immutable).
+  const moveCardTo = (id, column) =>
+    setBoard((b) => ({
+      ...b,
+      cards: b.cards.map((c) =>
+        c.id === id && c.column !== column ? { ...c, column } : c
+      ),
+    }))
+
   // S2.4 — filter by title across all columns. Empty query ⇒ the full board
   // (so the default render is identical to S2.1/S2.2/S2.3).
   const q = query.trim().toLowerCase()
@@ -217,6 +257,7 @@ export default function App() {
             onDelete={deleteCard}
             onMove={moveCard}
             onSetPriority={setPriority}
+            onMoveTo={moveCardTo}
           />
         ))}
       </main>
