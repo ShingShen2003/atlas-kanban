@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T04:10:44.717Z",
+  "generated_at": "2026-06-01T04:13:59.190Z",
   "modules": [
     {
       "id": "M1",
@@ -45,7 +45,7 @@
         "Columns are laid out horizontally and are responsive"
       ],
       "status": "merged",
-      "state": "in_review",
+      "state": "verified",
       "depends_on": [
         "S1.1"
       ],
@@ -53,11 +53,7 @@
       "merged_at": "2026-06-01T04:10:14Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/2",
       "claimed_by": "ShingShen2003",
-      "actual_ai_hours": 0.01,
-      "needs_human_review": {
-        "kind": "qa",
-        "since": "2026-06-01T04:10:44.717Z"
-      }
+      "actual_ai_hours": 0.01
     },
     {
       "id": "S1.3",
