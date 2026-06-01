@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T14:35:16.247Z",
+  "generated_at": "2026-06-01T14:38:49.832Z",
   "modules": [
     {
       "id": "M1",
@@ -131,7 +131,7 @@
         "Priority is editable and persists"
       ],
       "status": "merged",
-      "state": "in_review",
+      "state": "verified",
       "depends_on": [
         "S2.1"
       ],
@@ -139,11 +139,7 @@
       "merged_at": "2026-06-01T04:48:41Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/6",
       "claimed_by": "ShingShen2003",
-      "actual_ai_hours": 0.01,
-      "needs_human_review": {
-        "kind": "qa",
-        "since": "2026-06-01T14:35:16.247Z"
-      }
+      "actual_ai_hours": 0.01
     },
     {
       "id": "S2.4",
@@ -156,7 +152,7 @@
         "Clearing the search restores all cards"
       ],
       "status": "merged",
-      "state": "in_review",
+      "state": "verified",
       "depends_on": [
         "S2.1"
       ],
@@ -164,11 +160,7 @@
       "merged_at": "2026-06-01T04:50:47Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/7",
       "claimed_by": "ShingShen2003",
-      "actual_ai_hours": 0.01,
-      "needs_human_review": {
-        "kind": "qa",
-        "since": "2026-06-01T14:35:16.247Z"
-      }
+      "actual_ai_hours": 0.01
     },
     {
       "id": "S3.1",
