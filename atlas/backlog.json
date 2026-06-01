@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T16:20:18.704Z",
+  "generated_at": "2026-06-01T16:21:55.224Z",
   "modules": [
     {
       "id": "M1",
@@ -193,7 +193,7 @@
         "Each column header shows a live count of its cards"
       ],
       "status": "merged",
-      "state": "in_review",
+      "state": "verified",
       "depends_on": [
         "S2.2"
       ],
@@ -201,11 +201,7 @@
       "merged_at": "2026-06-01T16:00:39Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/12",
       "claimed_by": "ShingShen2003",
-      "actual_ai_hours": 0.02,
-      "needs_human_review": {
-        "kind": "qa",
-        "since": "2026-06-01T16:20:18.703Z"
-      }
+      "actual_ai_hours": 0.02
     },
     {
       "id": "S3.3",
