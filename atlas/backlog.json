@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T03:57:41.341Z",
+  "generated_at": "2026-06-01T04:07:51.327Z",
   "modules": [
     {
       "id": "M1",
@@ -44,11 +44,13 @@
         "Three columns render with headers To Do, Doing, Done",
         "Columns are laid out horizontally and are responsive"
       ],
-      "status": "pending",
-      "state": "queued",
+      "status": "in_progress",
+      "state": "working",
       "depends_on": [
         "S1.1"
-      ]
+      ],
+      "claimed_by": "atlas-bot",
+      "worktree_branch": "feat/S1.2-board-columns"
     },
     {
       "id": "S1.3",
@@ -202,9 +204,11 @@
       "title": "Build the three-column board layout",
       "module": "Board",
       "phase": 1,
-      "status": "pending",
-      "state": "queued",
-      "events": []
+      "status": "in_progress",
+      "state": "working",
+      "events": [],
+      "claimed_by": "atlas-bot",
+      "worktree_branch": "feat/S1.2-board-columns"
     },
     {
       "id": "T1.3.1",
