@@ -204,6 +204,34 @@
           "pr_number": null
         }
       ]
+    },
+    {
+      "id": "S1.4",
+      "title": "Reconciler ignores atlas:backlog-change PRs in state overlay",
+      "module": "Foundation",
+      "phase": 1,
+      "ui": false,
+      "acceptance": [
+        "An atlas:backlog-change PR does not advance the referenced story past queued",
+        "A real feature PR for a story still advances its state",
+        "Adding a story via atlas-update leaves it queued until a feature PR lands"
+      ],
+      "status": "pending",
+      "state": "queued",
+      "depends_on": [],
+      "evolution_log": [
+        {
+          "timestamp": "2026-06-01T14:29:59.772Z",
+          "operation": "add",
+          "by": "ShingShen2003",
+          "reason": "S2.5 (added via atlas-update for drag-and-drop) jumped straight to in_review: the reconciler matched the backlog-change PR — which references S2.5 in its title — as if it were S2.5's implementation PR. Any story added mid-flight mis-states this way. Teaching the reconciler to ignore plan-change PRs keeps added stories queued until real code ships.",
+          "changes": {
+            "added": "→ S1.4 (reconciler backlog-change exclusion; ui:false)"
+          },
+          "pr_url": null,
+          "pr_number": null
+        }
+      ]
     }
   ],
   "tasks": [
@@ -333,6 +361,16 @@
       "title": "Drag affordance styles; verify ◀▶ move still works",
       "module": "Board",
       "phase": 2,
+      "status": "pending",
+      "state": "queued",
+      "events": []
+    },
+    {
+      "id": "T1.4.1",
+      "story_id": "S1.4",
+      "title": "Exclude atlas:backlog-change PRs + atlas-update branches from reconciler matching",
+      "module": "Foundation",
+      "phase": 1,
       "status": "pending",
       "state": "queued",
       "events": []
