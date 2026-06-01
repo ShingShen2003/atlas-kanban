@@ -1,9 +1,18 @@
 {
   "generated_at": "2026-05-31T00:00:00Z",
   "modules": [
-    { "id": "M1", "name": "Foundation" },
-    { "id": "M2", "name": "Board" },
-    { "id": "M3", "name": "Polish" }
+    {
+      "id": "M1",
+      "name": "Foundation"
+    },
+    {
+      "id": "M2",
+      "name": "Board"
+    },
+    {
+      "id": "M3",
+      "name": "Polish"
+    }
   ],
   "stories": [
     {
@@ -32,7 +41,9 @@
       ],
       "status": "pending",
       "state": "queued",
-      "depends_on": ["S1.1"]
+      "depends_on": [
+        "S1.1"
+      ]
     },
     {
       "id": "S1.3",
@@ -46,7 +57,9 @@
       ],
       "status": "pending",
       "state": "queued",
-      "depends_on": ["S1.1"]
+      "depends_on": [
+        "S1.1"
+      ]
     },
     {
       "id": "S2.1",
@@ -61,7 +74,10 @@
       ],
       "status": "pending",
       "state": "queued",
-      "depends_on": ["S1.2", "S1.3"]
+      "depends_on": [
+        "S1.2",
+        "S1.3"
+      ]
     },
     {
       "id": "S2.2",
@@ -75,7 +91,9 @@
       ],
       "status": "pending",
       "state": "queued",
-      "depends_on": ["S2.1"]
+      "depends_on": [
+        "S2.1"
+      ]
     },
     {
       "id": "S2.3",
@@ -89,7 +107,9 @@
       ],
       "status": "pending",
       "state": "queued",
-      "depends_on": ["S2.1"]
+      "depends_on": [
+        "S2.1"
+      ]
     },
     {
       "id": "S2.4",
@@ -103,7 +123,9 @@
       ],
       "status": "pending",
       "state": "queued",
-      "depends_on": ["S2.1"]
+      "depends_on": [
+        "S2.1"
+      ]
     },
     {
       "id": "S3.1",
@@ -117,7 +139,9 @@
       ],
       "status": "pending",
       "state": "queued",
-      "depends_on": ["S2.1"]
+      "depends_on": [
+        "S2.1"
+      ]
     },
     {
       "id": "S3.2",
@@ -130,7 +154,9 @@
       ],
       "status": "pending",
       "state": "queued",
-      "depends_on": ["S2.2"]
+      "depends_on": [
+        "S2.2"
+      ]
     },
     {
       "id": "S3.3",
@@ -144,19 +170,172 @@
       ],
       "status": "pending",
       "state": "queued",
-      "depends_on": ["S2.1", "S2.4"]
+      "depends_on": [
+        "S2.1",
+        "S2.4"
+      ]
+    },
+    {
+      "id": "S2.5",
+      "title": "Drag and drop cards between columns",
+      "module": "Board",
+      "phase": 2,
+      "ui": true,
+      "acceptance": [
+        "A card can be dragged onto another column to move it there",
+        "The dragged move persists after reload",
+        "The S2.2 ◀▶ button/keyboard move still works"
+      ],
+      "status": "pending",
+      "state": "queued",
+      "depends_on": [
+        "S2.2"
+      ],
+      "evolution_log": [
+        {
+          "timestamp": "2026-06-01T14:20:38.055Z",
+          "operation": "add",
+          "by": "ShingShen2003",
+          "reason": "Product owner requested drag-and-drop during Phase 2 QA. The S2.2 ◀▶ buttons cover keyboard/accessibility, but pointer drag is the expected primary gesture on a Kanban board; capturing it as a discrete story keeps it claimable through the normal flow instead of an ad-hoc commit.",
+          "changes": {
+            "added": "→ S2.5 (drag-and-drop card movement; ui:true; depends_on S2.2)"
+          },
+          "pr_url": null,
+          "pr_number": null
+        }
+      ]
     }
   ],
   "tasks": [
-    { "id": "T1.1.1", "story_id": "S1.1", "title": "Scaffold Vite + React + router", "module": "Foundation", "phase": 1, "status": "pending", "state": "queued", "events": [] },
-    { "id": "T1.2.1", "story_id": "S1.2", "title": "Build the three-column board layout", "module": "Board", "phase": 1, "status": "pending", "state": "queued", "events": [] },
-    { "id": "T1.3.1", "story_id": "S1.3", "title": "Card model + localStorage hook", "module": "Foundation", "phase": 1, "status": "pending", "state": "queued", "events": [] },
-    { "id": "T2.1.1", "story_id": "S2.1", "title": "Card CRUD UI + handlers", "module": "Board", "phase": 2, "status": "pending", "state": "queued", "events": [] },
-    { "id": "T2.2.1", "story_id": "S2.2", "title": "Move-card controls + persistence", "module": "Board", "phase": 2, "status": "pending", "state": "queued", "events": [] },
-    { "id": "T2.3.1", "story_id": "S2.3", "title": "Priority badge component + editor", "module": "Board", "phase": 2, "status": "pending", "state": "queued", "events": [] },
-    { "id": "T2.4.1", "story_id": "S2.4", "title": "Search box + filter logic", "module": "Board", "phase": 2, "status": "pending", "state": "queued", "events": [] },
-    { "id": "T3.1.1", "story_id": "S3.1", "title": "Card detail modal component", "module": "Polish", "phase": 3, "status": "pending", "state": "queued", "events": [] },
-    { "id": "T3.2.1", "story_id": "S3.2", "title": "Per-column count badges", "module": "Polish", "phase": 3, "status": "pending", "state": "queued", "events": [] },
-    { "id": "T3.3.1", "story_id": "S3.3", "title": "Keyboard shortcut handlers", "module": "Polish", "phase": 3, "status": "pending", "state": "queued", "events": [] }
+    {
+      "id": "T1.1.1",
+      "story_id": "S1.1",
+      "title": "Scaffold Vite + React + router",
+      "module": "Foundation",
+      "phase": 1,
+      "status": "pending",
+      "state": "queued",
+      "events": []
+    },
+    {
+      "id": "T1.2.1",
+      "story_id": "S1.2",
+      "title": "Build the three-column board layout",
+      "module": "Board",
+      "phase": 1,
+      "status": "pending",
+      "state": "queued",
+      "events": []
+    },
+    {
+      "id": "T1.3.1",
+      "story_id": "S1.3",
+      "title": "Card model + localStorage hook",
+      "module": "Foundation",
+      "phase": 1,
+      "status": "pending",
+      "state": "queued",
+      "events": []
+    },
+    {
+      "id": "T2.1.1",
+      "story_id": "S2.1",
+      "title": "Card CRUD UI + handlers",
+      "module": "Board",
+      "phase": 2,
+      "status": "pending",
+      "state": "queued",
+      "events": []
+    },
+    {
+      "id": "T2.2.1",
+      "story_id": "S2.2",
+      "title": "Move-card controls + persistence",
+      "module": "Board",
+      "phase": 2,
+      "status": "pending",
+      "state": "queued",
+      "events": []
+    },
+    {
+      "id": "T2.3.1",
+      "story_id": "S2.3",
+      "title": "Priority badge component + editor",
+      "module": "Board",
+      "phase": 2,
+      "status": "pending",
+      "state": "queued",
+      "events": []
+    },
+    {
+      "id": "T2.4.1",
+      "story_id": "S2.4",
+      "title": "Search box + filter logic",
+      "module": "Board",
+      "phase": 2,
+      "status": "pending",
+      "state": "queued",
+      "events": []
+    },
+    {
+      "id": "T3.1.1",
+      "story_id": "S3.1",
+      "title": "Card detail modal component",
+      "module": "Polish",
+      "phase": 3,
+      "status": "pending",
+      "state": "queued",
+      "events": []
+    },
+    {
+      "id": "T3.2.1",
+      "story_id": "S3.2",
+      "title": "Per-column count badges",
+      "module": "Polish",
+      "phase": 3,
+      "status": "pending",
+      "state": "queued",
+      "events": []
+    },
+    {
+      "id": "T3.3.1",
+      "story_id": "S3.3",
+      "title": "Keyboard shortcut handlers",
+      "module": "Polish",
+      "phase": 3,
+      "status": "pending",
+      "state": "queued",
+      "events": []
+    },
+    {
+      "id": "T2.5.1",
+      "story_id": "S2.5",
+      "title": "Drag source + column drop targets (HTML5 DnD)",
+      "module": "Board",
+      "phase": 2,
+      "status": "pending",
+      "state": "queued",
+      "events": []
+    },
+    {
+      "id": "T2.5.2",
+      "story_id": "S2.5",
+      "title": "Immutable moveCardTo(id, column) handler + persistence",
+      "module": "Board",
+      "phase": 2,
+      "status": "pending",
+      "state": "queued",
+      "events": []
+    },
+    {
+      "id": "T2.5.3",
+      "story_id": "S2.5",
+      "title": "Drag affordance styles; verify ◀▶ move still works",
+      "module": "Board",
+      "phase": 2,
+      "status": "pending",
+      "state": "queued",
+      "events": []
+    }
   ]
 }
