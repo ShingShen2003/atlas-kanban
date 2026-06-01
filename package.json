@@ -1,0 +1,13 @@
+{
+  "name": "atlas-kanban",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "atlas:seed": "node scripts/atlas-seed.mjs",
+    "atlas:stats": "node scripts/atlas-stats.mjs",
+    "atlas:kb": "node scripts/atlas-kb.mjs",
+    "atlas": "node scripts/atlas-stats.mjs && node scripts/atlas-kb.mjs",
+    "prebuild": "npm run atlas:stats && npm run atlas:kb"
+  }
+}

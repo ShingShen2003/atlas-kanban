@@ -1,0 +1,6 @@
+# Atlas local claim anchor (ephemeral — never commit)
+.atlas/
+
+# Node
+node_modules/
+dist/

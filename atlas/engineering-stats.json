@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-06-01T00:40:24.731Z",
+  "loc": {
+    "total_net": 0,
+    "last_7d_net": 0,
+    "last_24h_net": 0,
+    "total_additions": 0,
+    "total_deletions": 0,
+    "last_7d_additions": 0,
+    "last_24h_additions": 0,
+    "per_day_7d_net": 0
+  },
+  "merges": {
+    "total": 0,
+    "last_24h": 0,
+    "last_7d": 0
+  },
+  "phases_shipped": null,
+  "lessons_recorded": 0
+}

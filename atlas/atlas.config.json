@@ -1,0 +1,50 @@
+{
+  "projectName": "Atlas Kanban",
+  "projectId": "atlas-kanban",
+  "tagline": "Live build progress for the Kanban board.",
+  "logoPath": "",
+  "brand": {
+    "primary": "#6C5CE7",
+    "gradient": ["#6C5CE7", "#8B7CF0", "#A29BFE", "#74B9FF", "#1e1b4b", "#4338ca"],
+    "fontDisplay": "Geist",
+    "fontBody": "Geist",
+    "fontMono": "Geist Mono",
+    "bg": "#0a1322"
+  },
+  "deployUrl": "http://localhost:5173",
+  "cockpitUrl": "",
+  "contactEmail": "shingshen@pisteyo.com",
+  "github": {
+    "repo": "ShingShen2003/atlas-kanban",
+    "backlogPath": "atlas/backlog.json",
+    "ref": "main",
+    "stateBranch": "atlas-state"
+  },
+  "auth": {
+    "mode": "none",
+    "pinSha256": "",
+    "creationPinSha256": "",
+    "clerkPublishableKey": "",
+    "allowedEmailDomain": ""
+  },
+  "diagrams": {
+    "endpoint": "",
+    "enabled": false
+  },
+  "stats": {
+    "noiseExcludes": ["*.snap", "*.generated.ts"]
+  },
+  "phases": {
+    "1": { "name": "Foundation", "tagline": "App scaffold, board layout, persistence." },
+    "2": { "name": "Core features", "tagline": "Cards CRUD, movement, labels, search." },
+    "3": { "name": "Polish", "tagline": "Detail modal, stats, keyboard shortcuts." }
+  },
+  "milestones": [
+    { "label": "MVP", "target": "Q3 2026", "phases": [1, 2] }
+  ],
+  "orchestrator": {
+    "maxConcurrent": 3,
+    "stallTimeoutMin": 30,
+    "conflictResolver": "enabled"
+  }
+}
