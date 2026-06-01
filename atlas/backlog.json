@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T04:07:51.327Z",
+  "generated_at": "2026-06-01T04:09:47.527Z",
   "modules": [
     {
       "id": "M1",
@@ -45,12 +45,13 @@
         "Columns are laid out horizontally and are responsive"
       ],
       "status": "in_progress",
-      "state": "working",
+      "state": "pr_open",
       "depends_on": [
         "S1.1"
       ],
-      "claimed_by": "atlas-bot",
-      "worktree_branch": "feat/S1.2-board-columns"
+      "pr_number": 2,
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/2",
+      "claimed_by": "ShingShen2003"
     },
     {
       "id": "S1.3",
@@ -205,10 +206,11 @@
       "module": "Board",
       "phase": 1,
       "status": "in_progress",
-      "state": "working",
+      "state": "pr_open",
       "events": [],
-      "claimed_by": "atlas-bot",
-      "worktree_branch": "feat/S1.2-board-columns"
+      "pr_number": 2,
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/2",
+      "claimed_by": "ShingShen2003"
     },
     {
       "id": "T1.3.1",
