@@ -383,9 +383,13 @@ export default function App() {
   // Skipped while typing in a field or while the modal is open.
   useEffect(() => {
     function onKey(e) {
+      if (e.repeat) return // ignore auto-repeat (holding the key)
       if (isEditableTarget(e.target)) return
       if (document.querySelector('.modal-overlay')) return
       if (e.key === 'n' || e.key === 'N') {
+        // Clear any active filter so the new card is actually visible (and
+        // counted) — otherwise N could create a card hidden by the search.
+        setQuery('')
         addCard(NEW_CARD_TITLE, COLUMNS[0])
       } else if (e.key === '/') {
         e.preventDefault()
