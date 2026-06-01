@@ -1,0 +1,281 @@
+{
+  "generated_at": "2026-06-01T00:41:42.533Z",
+  "modules": [
+    {
+      "id": "M1",
+      "name": "Foundation"
+    },
+    {
+      "id": "M2",
+      "name": "Board"
+    },
+    {
+      "id": "M3",
+      "name": "Polish"
+    }
+  ],
+  "stories": [
+    {
+      "id": "S1.1",
+      "title": "Scaffold the Vite + React app",
+      "module": "Foundation",
+      "phase": 1,
+      "ui": true,
+      "acceptance": [
+        "npm run build succeeds",
+        "The app boots to an empty board shell at /"
+      ],
+      "status": "pending",
+      "state": "queued",
+      "depends_on": []
+    },
+    {
+      "id": "S1.2",
+      "title": "Board layout with To Do / Doing / Done columns",
+      "module": "Board",
+      "phase": 1,
+      "ui": true,
+      "acceptance": [
+        "Three columns render with headers To Do, Doing, Done",
+        "Columns are laid out horizontally and are responsive"
+      ],
+      "status": "pending",
+      "state": "queued",
+      "depends_on": [
+        "S1.1"
+      ]
+    },
+    {
+      "id": "S1.3",
+      "title": "Card data model + localStorage persistence",
+      "module": "Foundation",
+      "phase": 1,
+      "ui": false,
+      "acceptance": [
+        "Cards have id, title, column, priority fields",
+        "Board state persists across reloads via localStorage"
+      ],
+      "status": "pending",
+      "state": "queued",
+      "depends_on": [
+        "S1.1"
+      ]
+    },
+    {
+      "id": "S2.1",
+      "title": "Add, edit, and delete cards",
+      "module": "Board",
+      "phase": 2,
+      "ui": true,
+      "acceptance": [
+        "A user can add a card to any column",
+        "A user can edit a card title inline",
+        "A user can delete a card"
+      ],
+      "status": "pending",
+      "state": "queued",
+      "depends_on": [
+        "S1.2",
+        "S1.3"
+      ]
+    },
+    {
+      "id": "S2.2",
+      "title": "Move cards between columns",
+      "module": "Board",
+      "phase": 2,
+      "ui": true,
+      "acceptance": [
+        "A card can move left/right between columns",
+        "The card's column persists after reload"
+      ],
+      "status": "pending",
+      "state": "queued",
+      "depends_on": [
+        "S2.1"
+      ]
+    },
+    {
+      "id": "S2.3",
+      "title": "Priority labels on cards",
+      "module": "Board",
+      "phase": 2,
+      "ui": true,
+      "acceptance": [
+        "Each card shows a colored priority badge (high/medium/low)",
+        "Priority is editable and persists"
+      ],
+      "status": "pending",
+      "state": "queued",
+      "depends_on": [
+        "S2.1"
+      ]
+    },
+    {
+      "id": "S2.4",
+      "title": "Search and filter cards",
+      "module": "Board",
+      "phase": 2,
+      "ui": true,
+      "acceptance": [
+        "A search box filters cards by title across all columns",
+        "Clearing the search restores all cards"
+      ],
+      "status": "pending",
+      "state": "queued",
+      "depends_on": [
+        "S2.1"
+      ]
+    },
+    {
+      "id": "S3.1",
+      "title": "Card detail modal",
+      "module": "Polish",
+      "phase": 3,
+      "ui": true,
+      "acceptance": [
+        "Clicking a card opens a modal with its details",
+        "The modal can be closed with Escape or a close button"
+      ],
+      "status": "pending",
+      "state": "queued",
+      "depends_on": [
+        "S2.1"
+      ]
+    },
+    {
+      "id": "S3.2",
+      "title": "Board stats — per-column counts",
+      "module": "Polish",
+      "phase": 3,
+      "ui": true,
+      "acceptance": [
+        "Each column header shows a live count of its cards"
+      ],
+      "status": "pending",
+      "state": "queued",
+      "depends_on": [
+        "S2.2"
+      ]
+    },
+    {
+      "id": "S3.3",
+      "title": "Keyboard shortcuts",
+      "module": "Polish",
+      "phase": 3,
+      "ui": false,
+      "acceptance": [
+        "N adds a new card to the first column",
+        "/ focuses the search box"
+      ],
+      "status": "pending",
+      "state": "queued",
+      "depends_on": [
+        "S2.1",
+        "S2.4"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "T1.1.1",
+      "story_id": "S1.1",
+      "title": "Scaffold Vite + React + router",
+      "module": "Foundation",
+      "phase": 1,
+      "status": "pending",
+      "state": "queued",
+      "events": []
+    },
+    {
+      "id": "T1.2.1",
+      "story_id": "S1.2",
+      "title": "Build the three-column board layout",
+      "module": "Board",
+      "phase": 1,
+      "status": "pending",
+      "state": "queued",
+      "events": []
+    },
+    {
+      "id": "T1.3.1",
+      "story_id": "S1.3",
+      "title": "Card model + localStorage hook",
+      "module": "Foundation",
+      "phase": 1,
+      "status": "pending",
+      "state": "queued",
+      "events": []
+    },
+    {
+      "id": "T2.1.1",
+      "story_id": "S2.1",
+      "title": "Card CRUD UI + handlers",
+      "module": "Board",
+      "phase": 2,
+      "status": "pending",
+      "state": "queued",
+      "events": []
+    },
+    {
+      "id": "T2.2.1",
+      "story_id": "S2.2",
+      "title": "Move-card controls + persistence",
+      "module": "Board",
+      "phase": 2,
+      "status": "pending",
+      "state": "queued",
+      "events": []
+    },
+    {
+      "id": "T2.3.1",
+      "story_id": "S2.3",
+      "title": "Priority badge component + editor",
+      "module": "Board",
+      "phase": 2,
+      "status": "pending",
+      "state": "queued",
+      "events": []
+    },
+    {
+      "id": "T2.4.1",
+      "story_id": "S2.4",
+      "title": "Search box + filter logic",
+      "module": "Board",
+      "phase": 2,
+      "status": "pending",
+      "state": "queued",
+      "events": []
+    },
+    {
+      "id": "T3.1.1",
+      "story_id": "S3.1",
+      "title": "Card detail modal component",
+      "module": "Polish",
+      "phase": 3,
+      "status": "pending",
+      "state": "queued",
+      "events": []
+    },
+    {
+      "id": "T3.2.1",
+      "story_id": "S3.2",
+      "title": "Per-column count badges",
+      "module": "Polish",
+      "phase": 3,
+      "status": "pending",
+      "state": "queued",
+      "events": []
+    },
+    {
+      "id": "T3.3.1",
+      "story_id": "S3.3",
+      "title": "Keyboard shortcut handlers",
+      "module": "Polish",
+      "phase": 3,
+      "status": "pending",
+      "state": "queued",
+      "events": []
+    }
+  ]
+}
