@@ -142,6 +142,7 @@ function Column({ title, cards, onAdd, onRename, onDelete, onMove, onSetPriority
 
 export default function App() {
   const [board, setBoard] = useBoard()
+  const [query, setQuery] = useState('') // S2.4 — transient, not persisted
 
   const addCard = (title, column) =>
     setBoard((b) => ({ ...b, cards: [...b.cards, makeCard(title, column)] }))
@@ -171,17 +172,46 @@ export default function App() {
       cards: b.cards.map((c) => (c.id === id ? { ...c, priority } : c)),
     }))
 
+  // S2.4 — filter by title across all columns. Empty query ⇒ the full board
+  // (so the default render is identical to S2.1/S2.2/S2.3).
+  const q = query.trim().toLowerCase()
+  const visibleCards = q
+    ? board.cards.filter((c) => c.title.toLowerCase().includes(q))
+    : board.cards
+
   return (
     <div className="app">
       <header className="topbar">
         <h1>Atlas Kanban</h1>
+        <div className="search">
+          <input
+            className="search-input"
+            type="search"
+            placeholder="Search cards…"
+            aria-label="Search cards by title"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Escape') setQuery('')
+            }}
+          />
+          {query && (
+            <button
+              className="search-clear"
+              aria-label="Clear search"
+              onClick={() => setQuery('')}
+            >
+              ×
+            </button>
+          )}
+        </div>
       </header>
       <main className="board" aria-label="board">
         {COLUMNS.map((title) => (
           <Column
             key={title}
             title={title}
-            cards={board.cards.filter((c) => c.column === title)}
+            cards={visibleCards.filter((c) => c.column === title)}
             onAdd={addCard}
             onRename={renameCard}
             onDelete={deleteCard}
