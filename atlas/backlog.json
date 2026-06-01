@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T04:50:31.719Z",
+  "generated_at": "2026-06-01T04:50:58.497Z",
   "modules": [
     {
       "id": "M1",
@@ -121,7 +121,7 @@
       "actual_ai_hours": 0.01,
       "needs_human_review": {
         "kind": "qa",
-        "since": "2026-06-01T04:50:31.719Z"
+        "since": "2026-06-01T04:50:58.497Z"
       }
     },
     {
@@ -146,7 +146,7 @@
       "actual_ai_hours": 0.01,
       "needs_human_review": {
         "kind": "qa",
-        "since": "2026-06-01T04:50:31.719Z"
+        "since": "2026-06-01T04:50:58.497Z"
       }
     },
     {
@@ -159,14 +159,20 @@
         "A search box filters cards by title across all columns",
         "Clearing the search restores all cards"
       ],
-      "status": "in_progress",
-      "state": "pr_open",
+      "status": "merged",
+      "state": "in_review",
       "depends_on": [
         "S2.1"
       ],
       "pr_number": 7,
+      "merged_at": "2026-06-01T04:50:47Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/7",
-      "claimed_by": "ShingShen2003"
+      "claimed_by": "ShingShen2003",
+      "actual_ai_hours": 0.01,
+      "needs_human_review": {
+        "kind": "qa",
+        "since": "2026-06-01T04:50:58.497Z"
+      }
     },
     {
       "id": "S3.1",
@@ -308,10 +314,11 @@
       "title": "Search box + filter logic",
       "module": "Board",
       "phase": 2,
-      "status": "in_progress",
-      "state": "pr_open",
+      "status": "merged",
+      "state": "merged",
       "events": [],
       "pr_number": 7,
+      "merged_at": "2026-06-01T04:50:47Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/7",
       "claimed_by": "ShingShen2003"
     },
