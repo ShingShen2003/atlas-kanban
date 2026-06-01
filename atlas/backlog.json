@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T16:16:24.584Z",
+  "generated_at": "2026-06-01T16:16:57.168Z",
   "modules": [
     {
       "id": "M1",
@@ -172,14 +172,16 @@
         "Clicking a card opens a modal with its details",
         "The modal can be closed with Escape or a close button"
       ],
-      "status": "in_progress",
-      "state": "pr_open",
+      "status": "merged",
+      "state": "verified",
       "depends_on": [
         "S2.1"
       ],
       "pr_number": 13,
+      "merged_at": "2026-06-01T16:16:37Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/13",
-      "claimed_by": "ShingShen2003"
+      "claimed_by": "ShingShen2003",
+      "actual_ai_hours": 0.01
     },
     {
       "id": "S3.2",
@@ -202,7 +204,7 @@
       "actual_ai_hours": 0.02,
       "needs_human_review": {
         "kind": "qa",
-        "since": "2026-06-01T16:16:24.584Z"
+        "since": "2026-06-01T16:16:57.168Z"
       }
     },
     {
@@ -215,12 +217,14 @@
         "N adds a new card to the first column",
         "/ focuses the search box"
       ],
-      "status": "pending",
-      "state": "queued",
+      "status": "in_progress",
+      "state": "working",
       "depends_on": [
         "S2.1",
         "S2.4"
-      ]
+      ],
+      "claimed_by": "atlas-bot",
+      "worktree_branch": "feat/S3.3-keyboard-shortcuts"
     },
     {
       "id": "S2.5",
@@ -396,10 +400,11 @@
       "title": "Card detail modal component",
       "module": "Polish",
       "phase": 3,
-      "status": "in_progress",
-      "state": "pr_open",
+      "status": "merged",
+      "state": "merged",
       "events": [],
       "pr_number": 13,
+      "merged_at": "2026-06-01T16:16:37Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/13",
       "claimed_by": "ShingShen2003"
     },
@@ -423,9 +428,11 @@
       "title": "Keyboard shortcut handlers",
       "module": "Polish",
       "phase": 3,
-      "status": "pending",
-      "state": "queued",
-      "events": []
+      "status": "in_progress",
+      "state": "working",
+      "events": [],
+      "claimed_by": "atlas-bot",
+      "worktree_branch": "feat/S3.3-keyboard-shortcuts"
     },
     {
       "id": "T2.5.1",
