@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T02:07:39.603Z",
+  "generated_at": "2026-06-01T02:14:01.787Z",
   "modules": [
     {
       "id": "M1",
@@ -26,12 +26,11 @@
         "The app boots to an empty board shell at /"
       ],
       "status": "in_progress",
-      "state": "working",
+      "state": "pr_open",
       "depends_on": [],
       "pr_number": 1,
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/1",
-      "claimed_by": "atlas-bot",
-      "worktree_branch": "feat/S1.1-scaffold-vite-react-app"
+      "claimed_by": "ShingShen2003"
     },
     {
       "id": "S1.2",
@@ -188,12 +187,11 @@
       "module": "Foundation",
       "phase": 1,
       "status": "in_progress",
-      "state": "working",
+      "state": "pr_open",
       "events": [],
       "pr_number": 1,
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/1",
-      "claimed_by": "atlas-bot",
-      "worktree_branch": "feat/S1.1-scaffold-vite-react-app"
+      "claimed_by": "ShingShen2003"
     },
     {
       "id": "T1.2.1",
