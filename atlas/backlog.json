@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T15:52:45.184Z",
+  "generated_at": "2026-06-01T15:56:28.968Z",
   "modules": [
     {
       "id": "M1",
@@ -222,7 +222,7 @@
         "The S2.2 ◀▶ button/keyboard move still works"
       ],
       "status": "merged",
-      "state": "in_review",
+      "state": "verified",
       "depends_on": [
         "S2.2"
       ],
@@ -243,11 +243,7 @@
       "merged_at": "2026-06-01T15:52:10Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/11",
       "claimed_by": "ShingShen2003",
-      "actual_ai_hours": 0.01,
-      "needs_human_review": {
-        "kind": "qa",
-        "since": "2026-06-01T15:52:45.183Z"
-      }
+      "actual_ai_hours": 0.01
     },
     {
       "id": "S1.4",
