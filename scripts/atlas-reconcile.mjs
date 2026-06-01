@@ -205,6 +205,22 @@ function deriveFromPr(pr) {
 }
 
 /**
+ * atlas-update PRs (labeled `atlas:backlog-change`, titled `atlas: <op> — …`)
+ * change the PLAN, not the code. Their titles reference story/task ids, so they
+ * must be excluded from PR→story state matching — counting one as a story's
+ * implementation PR would advance a just-added story past `queued` (to
+ * merged / in_review) before any code is written.
+ */
+export function isBacklogChangePr(pr) {
+  const labels = Array.isArray(pr?.labels) ? pr.labels : []
+  const hasLabel = labels.some(
+    (l) => (typeof l === 'string' ? l : l?.name) === 'atlas:backlog-change'
+  )
+  const titleIsAtlasOp = /^\s*atlas:\s/i.test(pr?.title ?? '')
+  return hasLabel || titleIsAtlasOp
+}
+
+/**
  * Apply a list of GitHub pull-request objects to a backlog, returning a new
  * backlog with updated story AND task statuses. Pure — does not mutate input.
  *
@@ -254,6 +270,10 @@ export function applyPullsToBacklog(backlog, pulls) {
   }
 
   for (const pr of pulls) {
+    // Plan-change PRs (atlas-update) reference story/task ids in their title
+    // but are NOT implementation work — skip them so a freshly-added story
+    // stays `queued` until a real feature PR lands.
+    if (isBacklogChangePr(pr)) continue
     const hits = new Set([
       ...taskIdsFrom(pr.title, knownIds),
       ...taskIdsFrom(pr.head?.ref, knownIds),
@@ -815,6 +835,10 @@ async function main() {
     // author lookups are exhausted). The only cost after one budget is spent is
     // a cheap no-op iteration (id-match + dedup checks), which is acceptable.
     if (lookupBudget <= 0 && compareBudget <= 0) break
+    // Skip atlas-update branches (feat/atlas-update-… / fix/atlas-update-…):
+    // they carry a story id in the branch name but are plan changes, not
+    // implementation work, so they must not drive the working/claimed overlay.
+    if (/^(feat|fix)\/atlas-update-/.test(branch.name)) continue
     if (taskIdsFrom(branch.name, knownForBranches).length === 0) continue
     const sha = branch?.commit?.sha
     if (!sha) continue
