@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T04:44:35.769Z",
+  "generated_at": "2026-06-01T04:45:57.279Z",
   "modules": [
     {
       "id": "M1",
@@ -110,12 +110,13 @@
         "The card's column persists after reload"
       ],
       "status": "in_progress",
-      "state": "working",
+      "state": "pr_open",
       "depends_on": [
         "S2.1"
       ],
-      "claimed_by": "atlas-bot",
-      "worktree_branch": "feat/S2.2-move-cards-between-columns"
+      "pr_number": 5,
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/5",
+      "claimed_by": "ShingShen2003"
     },
     {
       "id": "S2.3",
@@ -262,10 +263,11 @@
       "module": "Board",
       "phase": 2,
       "status": "in_progress",
-      "state": "working",
+      "state": "pr_open",
       "events": [],
-      "claimed_by": "atlas-bot",
-      "worktree_branch": "feat/S2.2-move-cards-between-columns"
+      "pr_number": 5,
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/5",
+      "claimed_by": "ShingShen2003"
     },
     {
       "id": "T2.3.1",
