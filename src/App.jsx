@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import './styles.css'
 import { useBoard, makeCard, COLUMNS, PRIORITIES, adjacentColumn } from './useBoard.js'
 
 // S2.1 — add/edit/delete cards.  S2.2 — move cards between columns (card footer
 // with ◀/▶, edge-disabled by the card's true column position).  S2.3 — editable
 // colored priority badge (a native select that doubles as the pill).
-function Card({ card, onRename, onDelete, onMove, onSetPriority }) {
+function Card({ card, onRename, onDelete, onMove, onSetPriority, onOpen }) {
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState(card.title)
   const [dragging, setDragging] = useState(false)
@@ -29,6 +29,31 @@ function Card({ card, onRename, onDelete, onMove, onSetPriority }) {
         setDragging(true)
       }}
       onDragEnd={() => setDragging(false)}
+      // S3.1 — single-click the card body opens the detail modal. Interactive
+      // children below stopPropagation so they don't also open it; omitted
+      // while editing so clicks in the edit input don't reopen it.
+      onClick={
+        editing
+          ? undefined
+          : (e) => {
+              // Focus the card so focus restores here when the modal closes
+              // (clicking a tabindex element doesn't focus it in some browsers).
+              e.currentTarget.focus()
+              onOpen(card.id)
+            }
+      }
+      // S3.1 (a11y) — keyboard path: the card is focusable and Enter/Space opens
+      // the modal, but only when focus is on the article itself (not an inner
+      // control, which handles its own keys). Gives focus somewhere to return to.
+      tabIndex={editing ? -1 : 0}
+      aria-label={`Card: ${card.title}. Press Enter to open details.`}
+      onKeyDown={(e) => {
+        if (editing || e.target !== e.currentTarget) return
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          onOpen(card.id)
+        }
+      }}
     >
       <div className="card-main">
         {editing ? (
@@ -50,6 +75,7 @@ function Card({ card, onRename, onDelete, onMove, onSetPriority }) {
           <span
             className="card-title"
             title="Double-click to edit"
+            onClick={(e) => e.stopPropagation()}
             onDoubleClick={() => setEditing(true)}
           >
             {card.title}
@@ -58,7 +84,10 @@ function Card({ card, onRename, onDelete, onMove, onSetPriority }) {
         <button
           className="card-delete"
           aria-label={`Delete ${card.title}`}
-          onClick={() => onDelete(card.id)}
+          onClick={(e) => {
+            e.stopPropagation()
+            onDelete(card.id)
+          }}
         >
           ×
         </button>
@@ -109,7 +138,7 @@ function Card({ card, onRename, onDelete, onMove, onSetPriority }) {
   )
 }
 
-function Column({ title, cards, onAdd, onRename, onDelete, onMove, onSetPriority, onMoveTo }) {
+function Column({ title, cards, onAdd, onRename, onDelete, onMove, onSetPriority, onMoveTo, onOpen }) {
   const [draft, setDraft] = useState('')
   const [dragOver, setDragOver] = useState(false)
 
@@ -157,6 +186,7 @@ function Column({ title, cards, onAdd, onRename, onDelete, onMove, onSetPriority
             onDelete={onDelete}
             onMove={onMove}
             onSetPriority={onSetPriority}
+            onOpen={onOpen}
           />
         ))}
       </div>
@@ -176,9 +206,109 @@ function Column({ title, cards, onAdd, onRename, onDelete, onMove, onSetPriority
   )
 }
 
+// S3.1 — read-only card detail modal. Closes on Escape, the × button, or a
+// backdrop click (the dialog body stops propagation so inner clicks don't close).
+// Accessible-dialog contract: focus moves into the dialog on open, Tab is
+// trapped inside it, and focus returns to the trigger on close.
+function CardModal({ card, onClose }) {
+  const dialogRef = useRef(null)
+
+  useEffect(() => {
+    const trigger = document.activeElement
+    // Make the background inert: removes it from BOTH the a11y tree and the tab
+    // order (so no focusable card lingers in a hidden subtree). Set as the DOM
+    // property for reliability across React versions.
+    const background = [
+      document.querySelector('.topbar'),
+      document.querySelector('.board'),
+    ].filter(Boolean)
+    background.forEach((el) => {
+      el.inert = true
+    })
+
+    const getFocusable = () =>
+      dialogRef.current
+        ? Array.from(
+            dialogRef.current.querySelectorAll(
+              'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+            )
+          ).filter((el) => !el.disabled)
+        : []
+
+    getFocusable()[0]?.focus() // focus-on-open (the × button)
+
+    function onKey(e) {
+      if (e.key === 'Escape') {
+        onClose()
+        return
+      }
+      if (e.key === 'Tab') {
+        const els = getFocusable()
+        if (els.length === 0) {
+          e.preventDefault()
+          return
+        }
+        const first = els[0]
+        const last = els[els.length - 1]
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault()
+          last.focus()
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault()
+          first.focus()
+        }
+      }
+    }
+    document.addEventListener('keydown', onKey)
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      // Un-inert the background BEFORE restoring focus, or focus() would be
+      // blocked by the still-inert subtree.
+      background.forEach((el) => {
+        el.inert = false
+      })
+      // focus-restore: return focus to the card that opened the modal
+      if (trigger && typeof trigger.focus === 'function') trigger.focus()
+    }
+  }, [onClose])
+
+  return (
+    <div className="modal-overlay" onClick={onClose}>
+      <div
+        className="modal"
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label={`Card details: ${card.title}`}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button className="modal-close" aria-label="Close" onClick={onClose}>
+          ×
+        </button>
+        <h2 className="modal-title">{card.title}</h2>
+        <dl className="modal-meta">
+          <div>
+            <dt>Column</dt>
+            <dd>{card.column}</dd>
+          </div>
+          <div>
+            <dt>Priority</dt>
+            <dd>{card.priority}</dd>
+          </div>
+          <div>
+            <dt>ID</dt>
+            <dd>{card.id}</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  )
+}
+
 export default function App() {
   const [board, setBoard] = useBoard()
   const [query, setQuery] = useState('') // S2.4 — transient, not persisted
+  const [selectedId, setSelectedId] = useState(null) // S3.1 — open card modal
 
   const addCard = (title, column) =>
     setBoard((b) => ({ ...b, cards: [...b.cards, makeCard(title, column)] }))
@@ -224,6 +354,11 @@ export default function App() {
     ? board.cards.filter((c) => c.title.toLowerCase().includes(q))
     : board.cards
 
+  // Resolve from the FULL board (not the filtered view) so an open modal
+  // survives a search that would hide its card.
+  const selectedCard = board.cards.find((c) => c.id === selectedId) ?? null
+  const closeModal = useCallback(() => setSelectedId(null), [])
+
   return (
     <div className="app">
       <header className="topbar">
@@ -263,9 +398,11 @@ export default function App() {
             onMove={moveCard}
             onSetPriority={setPriority}
             onMoveTo={moveCardTo}
+            onOpen={setSelectedId}
           />
         ))}
       </main>
+      {selectedCard && <CardModal card={selectedCard} onClose={closeModal} />}
     </div>
   )
 }
