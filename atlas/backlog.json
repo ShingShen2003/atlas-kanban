@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T04:19:57.667Z",
+  "generated_at": "2026-06-01T04:23:40.027Z",
   "modules": [
     {
       "id": "M1",
@@ -87,15 +87,21 @@
         "A user can edit a card title inline",
         "A user can delete a card"
       ],
-      "status": "in_progress",
-      "state": "pr_open",
+      "status": "merged",
+      "state": "in_review",
       "depends_on": [
         "S1.2",
         "S1.3"
       ],
       "pr_number": 4,
+      "merged_at": "2026-06-01T04:23:27Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/4",
-      "claimed_by": "ShingShen2003"
+      "claimed_by": "ShingShen2003",
+      "actual_ai_hours": 0.06,
+      "needs_human_review": {
+        "kind": "qa",
+        "since": "2026-06-01T04:23:40.027Z"
+      }
     },
     {
       "id": "S2.2",
@@ -243,10 +249,11 @@
       "title": "Card CRUD UI + handlers",
       "module": "Board",
       "phase": 2,
-      "status": "in_progress",
-      "state": "pr_open",
+      "status": "merged",
+      "state": "merged",
       "events": [],
       "pr_number": 4,
+      "merged_at": "2026-06-01T04:23:27Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/4",
       "claimed_by": "ShingShen2003"
     },
