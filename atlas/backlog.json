@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T02:15:07.272Z",
+  "generated_at": "2026-06-01T03:51:36.816Z",
   "modules": [
     {
       "id": "M1",
@@ -26,17 +26,13 @@
         "The app boots to an empty board shell at /"
       ],
       "status": "merged",
-      "state": "in_review",
+      "state": "verified",
       "depends_on": [],
       "pr_number": 1,
       "merged_at": "2026-06-01T02:14:47Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/1",
       "claimed_by": "ShingShen2003",
-      "actual_ai_hours": 0.17,
-      "needs_human_review": {
-        "kind": "qa",
-        "since": "2026-06-01T02:15:07.272Z"
-      }
+      "actual_ai_hours": 0.17
     },
     {
       "id": "S1.2",
