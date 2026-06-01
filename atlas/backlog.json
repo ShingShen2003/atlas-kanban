@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T04:15:04.617Z",
+  "generated_at": "2026-06-01T04:15:35.244Z",
   "modules": [
     {
       "id": "M1",
@@ -66,12 +66,13 @@
         "Board state persists across reloads via localStorage"
       ],
       "status": "in_progress",
-      "state": "working",
+      "state": "pr_open",
       "depends_on": [
         "S1.1"
       ],
-      "claimed_by": "atlas-bot",
-      "worktree_branch": "feat/S1.3-card-model-localstorage"
+      "pr_number": 3,
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/3",
+      "claimed_by": "ShingShen2003"
     },
     {
       "id": "S2.1",
@@ -224,10 +225,11 @@
       "module": "Foundation",
       "phase": 1,
       "status": "in_progress",
-      "state": "working",
+      "state": "pr_open",
       "events": [],
-      "claimed_by": "atlas-bot",
-      "worktree_branch": "feat/S1.3-card-model-localstorage"
+      "pr_number": 3,
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/3",
+      "claimed_by": "ShingShen2003"
     },
     {
       "id": "T2.1.1",
