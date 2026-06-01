@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T16:01:16.079Z",
+  "generated_at": "2026-06-01T16:16:09.617Z",
   "modules": [
     {
       "id": "M1",
@@ -173,12 +173,13 @@
         "The modal can be closed with Escape or a close button"
       ],
       "status": "in_progress",
-      "state": "working",
+      "state": "pr_open",
       "depends_on": [
         "S2.1"
       ],
-      "claimed_by": "atlas-bot",
-      "worktree_branch": "feat/S3.1-card-detail-modal"
+      "pr_number": 13,
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/13",
+      "claimed_by": "ShingShen2003"
     },
     {
       "id": "S3.2",
@@ -201,7 +202,7 @@
       "actual_ai_hours": 0.02,
       "needs_human_review": {
         "kind": "qa",
-        "since": "2026-06-01T16:01:16.078Z"
+        "since": "2026-06-01T16:16:09.617Z"
       }
     },
     {
@@ -396,10 +397,11 @@
       "module": "Polish",
       "phase": 3,
       "status": "in_progress",
-      "state": "working",
+      "state": "pr_open",
       "events": [],
-      "claimed_by": "atlas-bot",
-      "worktree_branch": "feat/S3.1-card-detail-modal"
+      "pr_number": 13,
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/13",
+      "claimed_by": "ShingShen2003"
     },
     {
       "id": "T3.2.1",
