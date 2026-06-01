@@ -127,7 +127,7 @@ body { margin: 0; background: #f5f5fb; }
 .card-delete {
   border: none;
   background: none;
-  color: #b2bec3;
+  color: #636e80;
   cursor: pointer;
   font-size: 1.1rem;
   line-height: 1;
@@ -172,13 +172,68 @@ body { margin: 0; background: #f5f5fb; }
   right: 0.45rem;
   border: none;
   background: none;
-  color: #b2bec3;
+  color: #636e80;
   cursor: pointer;
   font-size: 1rem;
   line-height: 1;
   padding: 0;
 }
 .search-clear:hover { color: #6c5ce7; }
+/* S3.1 — card detail modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(30, 27, 75, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 50;
+}
+.modal {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  width: 100%;
+  max-width: 22rem;
+  box-shadow: 0 12px 40px rgba(30, 27, 75, 0.25);
+}
+.modal-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.7rem;
+  border: none;
+  background: none;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: #636e80;
+  cursor: pointer;
+  padding: 0;
+}
+.modal-close:hover { color: #6c5ce7; }
+.modal-title {
+  margin: 0 1.5rem 0.9rem 0;
+  font-size: 1.1rem;
+  color: #1e1b4b;
+  word-break: break-word;
+}
+.modal-meta { margin: 0; display: grid; gap: 0.5rem; }
+.modal-meta > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid #f0eefb;
+  padding-top: 0.5rem;
+}
+.modal-meta dt {
+  margin: 0;
+  color: #6c5ce7;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+}
+.modal-meta dd { margin: 0; color: #1e1b4b; }
 @media (max-width: 640px) {
   .board { flex-direction: column; }
   .topbar { flex-wrap: wrap; gap: 0.5rem; }
