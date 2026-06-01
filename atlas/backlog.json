@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T14:32:32.288Z",
+  "generated_at": "2026-06-01T14:32:47.309Z",
   "modules": [
     {
       "id": "M1",
@@ -121,7 +121,7 @@
       "actual_ai_hours": 0.01,
       "needs_human_review": {
         "kind": "qa",
-        "since": "2026-06-01T14:32:32.287Z"
+        "since": "2026-06-01T14:32:47.309Z"
       }
     },
     {
@@ -146,7 +146,7 @@
       "actual_ai_hours": 0.01,
       "needs_human_review": {
         "kind": "qa",
-        "since": "2026-06-01T14:32:32.288Z"
+        "since": "2026-06-01T14:32:47.309Z"
       }
     },
     {
@@ -171,7 +171,7 @@
       "actual_ai_hours": 0.01,
       "needs_human_review": {
         "kind": "qa",
-        "since": "2026-06-01T14:32:32.288Z"
+        "since": "2026-06-01T14:32:47.309Z"
       }
     },
     {
