@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import './styles.css'
-import { useBoard, makeCard, COLUMNS, adjacentColumn } from './useBoard.js'
+import { useBoard, makeCard, COLUMNS, PRIORITIES, adjacentColumn } from './useBoard.js'
 
 // S2.1 — add/edit/delete cards.  S2.2 — move cards between columns (card footer
-// with ◀/▶, edge-disabled by the card's true column position).
-function Card({ card, onRename, onDelete, onMove }) {
+// with ◀/▶, edge-disabled by the card's true column position).  S2.3 — editable
+// colored priority badge (a native select that doubles as the pill).
+function Card({ card, onRename, onDelete, onMove, onSetPriority }) {
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState(card.title)
   const idx = COLUMNS.indexOf(card.column)
@@ -52,6 +53,22 @@ function Card({ card, onRename, onDelete, onMove }) {
         </button>
       </div>
       <div className="card-footer">
+        <select
+          className={`card-priority priority-${card.priority}`}
+          aria-label={`Priority for ${card.title}`}
+          value={card.priority}
+          onClick={(e) => e.stopPropagation()}
+          onChange={(e) => {
+            e.stopPropagation()
+            onSetPriority(card.id, e.target.value)
+          }}
+        >
+          {PRIORITIES.map((p) => (
+            <option key={p} value={p}>
+              {p}
+            </option>
+          ))}
+        </select>
         <div className="card-moves">
           <button
             className="card-move"
@@ -81,7 +98,7 @@ function Card({ card, onRename, onDelete, onMove }) {
   )
 }
 
-function Column({ title, cards, onAdd, onRename, onDelete, onMove }) {
+function Column({ title, cards, onAdd, onRename, onDelete, onMove, onSetPriority }) {
   const [draft, setDraft] = useState('')
 
   function submit(e) {
@@ -103,6 +120,7 @@ function Column({ title, cards, onAdd, onRename, onDelete, onMove }) {
             onRename={onRename}
             onDelete={onDelete}
             onMove={onMove}
+            onSetPriority={onSetPriority}
           />
         ))}
       </div>
@@ -147,6 +165,12 @@ export default function App() {
       }),
     }))
 
+  const setPriority = (id, priority) =>
+    setBoard((b) => ({
+      ...b,
+      cards: b.cards.map((c) => (c.id === id ? { ...c, priority } : c)),
+    }))
+
   return (
     <div className="app">
       <header className="topbar">
@@ -162,6 +186,7 @@ export default function App() {
             onRename={renameCard}
             onDelete={deleteCard}
             onMove={moveCard}
+            onSetPriority={setPriority}
           />
         ))}
       </main>
