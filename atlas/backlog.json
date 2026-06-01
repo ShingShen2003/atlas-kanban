@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T15:47:31.695Z",
+  "generated_at": "2026-06-01T15:51:35.581Z",
   "modules": [
     {
       "id": "M1",
@@ -222,7 +222,7 @@
         "The S2.2 ◀▶ button/keyboard move still works"
       ],
       "status": "in_progress",
-      "state": "working",
+      "state": "pr_open",
       "depends_on": [
         "S2.2"
       ],
@@ -239,8 +239,9 @@
           "pr_number": null
         }
       ],
-      "claimed_by": "atlas-bot",
-      "worktree_branch": "feat/S2.5-drag-and-drop-cards"
+      "pr_number": 11,
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/11",
+      "claimed_by": "ShingShen2003"
     },
     {
       "id": "S1.4",
@@ -412,10 +413,11 @@
       "module": "Board",
       "phase": 2,
       "status": "in_progress",
-      "state": "working",
+      "state": "pr_open",
       "events": [],
-      "claimed_by": "atlas-bot",
-      "worktree_branch": "feat/S2.5-drag-and-drop-cards"
+      "pr_number": 11,
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/11",
+      "claimed_by": "ShingShen2003"
     },
     {
       "id": "T2.5.2",
@@ -424,10 +426,11 @@
       "module": "Board",
       "phase": 2,
       "status": "in_progress",
-      "state": "working",
+      "state": "pr_open",
       "events": [],
-      "claimed_by": "atlas-bot",
-      "worktree_branch": "feat/S2.5-drag-and-drop-cards"
+      "pr_number": 11,
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/11",
+      "claimed_by": "ShingShen2003"
     },
     {
       "id": "T2.5.3",
@@ -436,10 +439,11 @@
       "module": "Board",
       "phase": 2,
       "status": "in_progress",
-      "state": "working",
+      "state": "pr_open",
       "events": [],
-      "claimed_by": "atlas-bot",
-      "worktree_branch": "feat/S2.5-drag-and-drop-cards"
+      "pr_number": 11,
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/11",
+      "claimed_by": "ShingShen2003"
     },
     {
       "id": "T1.4.1",
