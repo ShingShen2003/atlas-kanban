@@ -142,7 +142,12 @@ function Column({ title, cards, onAdd, onRename, onDelete, onMove, onSetPriority
       }}
       onDrop={handleDrop}
     >
-      <h2 className="column-title">{title}</h2>
+      <h2 className="column-title">
+        <span className="column-label">{title}</span>
+        <span className="column-count" aria-label={`${cards.length} cards`}>
+          {cards.length}
+        </span>
+      </h2>
       <div className="column-cards" aria-label={`${title} cards`}>
         {cards.map((c) => (
           <Card
