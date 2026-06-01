@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T14:21:28.695Z",
+  "generated_at": "2026-06-01T14:22:33.173Z",
   "modules": [
     {
       "id": "M1",
@@ -121,7 +121,7 @@
       "actual_ai_hours": 0.01,
       "needs_human_review": {
         "kind": "qa",
-        "since": "2026-06-01T14:21:28.695Z"
+        "since": "2026-06-01T14:22:33.172Z"
       }
     },
     {
@@ -146,7 +146,7 @@
       "actual_ai_hours": 0.01,
       "needs_human_review": {
         "kind": "qa",
-        "since": "2026-06-01T14:21:28.695Z"
+        "since": "2026-06-01T14:22:33.172Z"
       }
     },
     {
@@ -171,7 +171,7 @@
       "actual_ai_hours": 0.01,
       "needs_human_review": {
         "kind": "qa",
-        "since": "2026-06-01T14:21:28.695Z"
+        "since": "2026-06-01T14:22:33.172Z"
       }
     },
     {
@@ -221,6 +221,45 @@
         "S2.1",
         "S2.4"
       ]
+    },
+    {
+      "id": "S2.5",
+      "title": "Drag and drop cards between columns",
+      "module": "Board",
+      "phase": 2,
+      "ui": true,
+      "acceptance": [
+        "A card can be dragged onto another column to move it there",
+        "The dragged move persists after reload",
+        "The S2.2 ◀▶ button/keyboard move still works"
+      ],
+      "status": "merged",
+      "state": "in_review",
+      "depends_on": [
+        "S2.2"
+      ],
+      "evolution_log": [
+        {
+          "timestamp": "2026-06-01T14:20:38.055Z",
+          "operation": "add",
+          "by": "ShingShen2003",
+          "reason": "Product owner requested drag-and-drop during Phase 2 QA. The S2.2 ◀▶ buttons cover keyboard/accessibility, but pointer drag is the expected primary gesture on a Kanban board; capturing it as a discrete story keeps it claimable through the normal flow instead of an ad-hoc commit.",
+          "changes": {
+            "added": "→ S2.5 (drag-and-drop card movement; ui:true; depends_on S2.2)"
+          },
+          "pr_url": null,
+          "pr_number": null
+        }
+      ],
+      "pr_number": 8,
+      "merged_at": "2026-06-01T14:22:05Z",
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/8",
+      "claimed_by": "ShingShen2003",
+      "actual_ai_hours": 0.02,
+      "needs_human_review": {
+        "kind": "qa",
+        "since": "2026-06-01T14:22:33.172Z"
+      }
     }
   ],
   "tasks": [
@@ -351,6 +390,48 @@
       "status": "pending",
       "state": "queued",
       "events": []
+    },
+    {
+      "id": "T2.5.1",
+      "story_id": "S2.5",
+      "title": "Drag source + column drop targets (HTML5 DnD)",
+      "module": "Board",
+      "phase": 2,
+      "status": "merged",
+      "state": "merged",
+      "events": [],
+      "pr_number": 8,
+      "merged_at": "2026-06-01T14:22:05Z",
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/8",
+      "claimed_by": "ShingShen2003"
+    },
+    {
+      "id": "T2.5.2",
+      "story_id": "S2.5",
+      "title": "Immutable moveCardTo(id, column) handler + persistence",
+      "module": "Board",
+      "phase": 2,
+      "status": "merged",
+      "state": "merged",
+      "events": [],
+      "pr_number": 8,
+      "merged_at": "2026-06-01T14:22:05Z",
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/8",
+      "claimed_by": "ShingShen2003"
+    },
+    {
+      "id": "T2.5.3",
+      "story_id": "S2.5",
+      "title": "Drag affordance styles; verify ◀▶ move still works",
+      "module": "Board",
+      "phase": 2,
+      "status": "merged",
+      "state": "merged",
+      "events": [],
+      "pr_number": 8,
+      "merged_at": "2026-06-01T14:22:05Z",
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/8",
+      "claimed_by": "ShingShen2003"
     }
   ]
 }
