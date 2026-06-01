@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T15:51:53.781Z",
+  "generated_at": "2026-06-01T15:52:28.840Z",
   "modules": [
     {
       "id": "M1",
@@ -221,8 +221,8 @@
         "The dragged move persists after reload",
         "The S2.2 ◀▶ button/keyboard move still works"
       ],
-      "status": "in_progress",
-      "state": "pr_open",
+      "status": "merged",
+      "state": "in_review",
       "depends_on": [
         "S2.2"
       ],
@@ -240,8 +240,14 @@
         }
       ],
       "pr_number": 11,
+      "merged_at": "2026-06-01T15:52:10Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/11",
-      "claimed_by": "ShingShen2003"
+      "claimed_by": "ShingShen2003",
+      "actual_ai_hours": 0.01,
+      "needs_human_review": {
+        "kind": "qa",
+        "since": "2026-06-01T15:52:28.839Z"
+      }
     },
     {
       "id": "S1.4",
@@ -412,10 +418,11 @@
       "title": "Drag source + column drop targets (HTML5 DnD)",
       "module": "Board",
       "phase": 2,
-      "status": "in_progress",
-      "state": "pr_open",
+      "status": "merged",
+      "state": "merged",
       "events": [],
       "pr_number": 11,
+      "merged_at": "2026-06-01T15:52:10Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/11",
       "claimed_by": "ShingShen2003"
     },
@@ -425,10 +432,11 @@
       "title": "Immutable moveCardTo(id, column) handler + persistence",
       "module": "Board",
       "phase": 2,
-      "status": "in_progress",
-      "state": "pr_open",
+      "status": "merged",
+      "state": "merged",
       "events": [],
       "pr_number": 11,
+      "merged_at": "2026-06-01T15:52:10Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/11",
       "claimed_by": "ShingShen2003"
     },
@@ -438,10 +446,11 @@
       "title": "Drag affordance styles; verify ◀▶ move still works",
       "module": "Board",
       "phase": 2,
-      "status": "in_progress",
-      "state": "pr_open",
+      "status": "merged",
+      "state": "merged",
       "events": [],
       "pr_number": 11,
+      "merged_at": "2026-06-01T15:52:10Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/11",
       "claimed_by": "ShingShen2003"
     },
