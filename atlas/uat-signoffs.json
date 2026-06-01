@@ -47,7 +47,27 @@
           "verdict": "pass"
         }
       ]
+    },
+    "S2.1": {
+      "decision": "approved",
+      "decided_by": "shingshen@pisteyo.com",
+      "decided_at": "2026-06-01T04:34:13.841357+00:00",
+      "all_pass": true,
+      "criteria": [
+        {
+          "key": "e28baadaceadd72e",
+          "verdict": "pass"
+        },
+        {
+          "key": "b9d7009bae133390",
+          "verdict": "pass"
+        },
+        {
+          "key": "2ba52edf96d8fb6d",
+          "verdict": "pass"
+        }
+      ]
     }
   },
-  "generated_at": "2026-06-01T04:13:47.561933+00:00"
+  "generated_at": "2026-06-01T04:34:14.207265+00:00"
 }
