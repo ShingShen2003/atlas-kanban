@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T04:48:55.668Z",
+  "generated_at": "2026-06-01T04:49:08.861Z",
   "modules": [
     {
       "id": "M1",
@@ -121,7 +121,7 @@
       "actual_ai_hours": 0.01,
       "needs_human_review": {
         "kind": "qa",
-        "since": "2026-06-01T04:48:55.667Z"
+        "since": "2026-06-01T04:49:08.861Z"
       }
     },
     {
@@ -146,7 +146,7 @@
       "actual_ai_hours": 0.01,
       "needs_human_review": {
         "kind": "qa",
-        "since": "2026-06-01T04:48:55.667Z"
+        "since": "2026-06-01T04:49:08.861Z"
       }
     },
     {
