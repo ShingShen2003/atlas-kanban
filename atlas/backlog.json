@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T16:18:18.165Z",
+  "generated_at": "2026-06-01T16:19:32.947Z",
   "modules": [
     {
       "id": "M1",
@@ -204,7 +204,7 @@
       "actual_ai_hours": 0.02,
       "needs_human_review": {
         "kind": "qa",
-        "since": "2026-06-01T16:18:18.165Z"
+        "since": "2026-06-01T16:19:32.947Z"
       }
     },
     {
@@ -217,15 +217,17 @@
         "N adds a new card to the first column",
         "/ focuses the search box"
       ],
-      "status": "in_progress",
-      "state": "pr_open",
+      "status": "merged",
+      "state": "merged",
       "depends_on": [
         "S2.1",
         "S2.4"
       ],
       "pr_number": 14,
+      "merged_at": "2026-06-01T16:18:55Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/14",
-      "claimed_by": "ShingShen2003"
+      "claimed_by": "ShingShen2003",
+      "actual_ai_hours": 0.02
     },
     {
       "id": "S2.5",
@@ -429,10 +431,11 @@
       "title": "Keyboard shortcut handlers",
       "module": "Polish",
       "phase": 3,
-      "status": "in_progress",
-      "state": "pr_open",
+      "status": "merged",
+      "state": "merged",
       "events": [],
       "pr_number": 14,
+      "merged_at": "2026-06-01T16:18:55Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/14",
       "claimed_by": "ShingShen2003"
     },
