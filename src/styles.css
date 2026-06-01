@@ -134,6 +134,35 @@ body { margin: 0; background: #f5f5fb; }
   font-size: 1rem;
 }
 .add-card-btn:hover { background: #5a4bd1; }
+.search { margin-left: auto; position: relative; display: flex; align-items: center; }
+.search-input {
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.35rem 1.7rem 0.35rem 0.7rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  min-width: 12rem;
+}
+.search-input:focus {
+  outline: 2px solid #cdc4f5;
+  outline-offset: 0;
+  border-color: #6c5ce7;
+}
+.search-clear {
+  position: absolute;
+  right: 0.45rem;
+  border: none;
+  background: none;
+  color: #b2bec3;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0;
+}
+.search-clear:hover { color: #6c5ce7; }
 @media (max-width: 640px) {
   .board { flex-direction: column; }
+  .topbar { flex-wrap: wrap; gap: 0.5rem; }
+  .search { width: 100%; }
+  .search-input { width: 100%; min-width: 0; }
 }
