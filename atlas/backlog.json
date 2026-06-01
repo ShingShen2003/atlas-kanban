@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T04:49:37.961Z",
+  "generated_at": "2026-06-01T04:50:20.211Z",
   "modules": [
     {
       "id": "M1",
@@ -121,7 +121,7 @@
       "actual_ai_hours": 0.01,
       "needs_human_review": {
         "kind": "qa",
-        "since": "2026-06-01T04:49:37.961Z"
+        "since": "2026-06-01T04:50:20.210Z"
       }
     },
     {
@@ -146,7 +146,7 @@
       "actual_ai_hours": 0.01,
       "needs_human_review": {
         "kind": "qa",
-        "since": "2026-06-01T04:49:37.961Z"
+        "since": "2026-06-01T04:50:20.211Z"
       }
     },
     {
@@ -160,12 +160,13 @@
         "Clearing the search restores all cards"
       ],
       "status": "in_progress",
-      "state": "working",
+      "state": "pr_open",
       "depends_on": [
         "S2.1"
       ],
-      "claimed_by": "atlas-bot",
-      "worktree_branch": "feat/S2.4-search-and-filter-cards"
+      "pr_number": 7,
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/7",
+      "claimed_by": "ShingShen2003"
     },
     {
       "id": "S3.1",
@@ -308,10 +309,11 @@
       "module": "Board",
       "phase": 2,
       "status": "in_progress",
-      "state": "working",
+      "state": "pr_open",
       "events": [],
-      "claimed_by": "atlas-bot",
-      "worktree_branch": "feat/S2.4-search-and-filter-cards"
+      "pr_number": 7,
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/7",
+      "claimed_by": "ShingShen2003"
     },
     {
       "id": "T3.1.1",
