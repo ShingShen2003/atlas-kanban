@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T16:17:10.362Z",
+  "generated_at": "2026-06-01T16:18:02.511Z",
   "modules": [
     {
       "id": "M1",
@@ -204,7 +204,7 @@
       "actual_ai_hours": 0.02,
       "needs_human_review": {
         "kind": "qa",
-        "since": "2026-06-01T16:17:10.362Z"
+        "since": "2026-06-01T16:18:02.511Z"
       }
     },
     {
@@ -218,13 +218,14 @@
         "/ focuses the search box"
       ],
       "status": "in_progress",
-      "state": "working",
+      "state": "pr_open",
       "depends_on": [
         "S2.1",
         "S2.4"
       ],
-      "claimed_by": "atlas-bot",
-      "worktree_branch": "feat/S3.3-keyboard-shortcuts"
+      "pr_number": 14,
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/14",
+      "claimed_by": "ShingShen2003"
     },
     {
       "id": "S2.5",
@@ -429,10 +430,11 @@
       "module": "Polish",
       "phase": 3,
       "status": "in_progress",
-      "state": "working",
+      "state": "pr_open",
       "events": [],
-      "claimed_by": "atlas-bot",
-      "worktree_branch": "feat/S3.3-keyboard-shortcuts"
+      "pr_number": 14,
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/14",
+      "claimed_by": "ShingShen2003"
     },
     {
       "id": "T2.5.1",
