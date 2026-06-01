@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T04:15:52.116Z",
+  "generated_at": "2026-06-01T04:17:50.211Z",
   "modules": [
     {
       "id": "M1",
@@ -65,14 +65,16 @@
         "Cards have id, title, column, priority fields",
         "Board state persists across reloads via localStorage"
       ],
-      "status": "in_progress",
-      "state": "pr_open",
+      "status": "merged",
+      "state": "merged",
       "depends_on": [
         "S1.1"
       ],
       "pr_number": 3,
+      "merged_at": "2026-06-01T04:17:40Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/3",
-      "claimed_by": "ShingShen2003"
+      "claimed_by": "ShingShen2003",
+      "actual_ai_hours": 0.04
     },
     {
       "id": "S2.1",
@@ -224,10 +226,11 @@
       "title": "Card model + localStorage hook",
       "module": "Foundation",
       "phase": 1,
-      "status": "in_progress",
-      "state": "pr_open",
+      "status": "merged",
+      "state": "merged",
       "events": [],
       "pr_number": 3,
+      "merged_at": "2026-06-01T04:17:40Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/3",
       "claimed_by": "ShingShen2003"
     },
