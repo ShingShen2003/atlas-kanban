@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T04:18:04.512Z",
+  "generated_at": "2026-06-01T04:18:44.254Z",
   "modules": [
     {
       "id": "M1",
@@ -87,12 +87,14 @@
         "A user can edit a card title inline",
         "A user can delete a card"
       ],
-      "status": "pending",
-      "state": "queued",
+      "status": "in_progress",
+      "state": "working",
       "depends_on": [
         "S1.2",
         "S1.3"
-      ]
+      ],
+      "claimed_by": "atlas-bot",
+      "worktree_branch": "feat/S2.1-add-edit-delete-cards"
     },
     {
       "id": "S2.2",
@@ -240,9 +242,11 @@
       "title": "Card CRUD UI + handlers",
       "module": "Board",
       "phase": 2,
-      "status": "pending",
-      "state": "queued",
-      "events": []
+      "status": "in_progress",
+      "state": "working",
+      "events": [],
+      "claimed_by": "atlas-bot",
+      "worktree_branch": "feat/S2.1-add-edit-delete-cards"
     },
     {
       "id": "T2.2.1",
