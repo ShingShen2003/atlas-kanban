@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T02:14:15.381Z",
+  "generated_at": "2026-06-01T02:14:56.624Z",
   "modules": [
     {
       "id": "M1",
@@ -25,12 +25,18 @@
         "npm run build succeeds",
         "The app boots to an empty board shell at /"
       ],
-      "status": "in_progress",
-      "state": "pr_open",
+      "status": "merged",
+      "state": "in_review",
       "depends_on": [],
       "pr_number": 1,
+      "merged_at": "2026-06-01T02:14:47Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/1",
-      "claimed_by": "ShingShen2003"
+      "claimed_by": "ShingShen2003",
+      "actual_ai_hours": 0.17,
+      "needs_human_review": {
+        "kind": "qa",
+        "since": "2026-06-01T02:14:56.624Z"
+      }
     },
     {
       "id": "S1.2",
@@ -186,10 +192,11 @@
       "title": "Scaffold Vite + React + router",
       "module": "Foundation",
       "phase": 1,
-      "status": "in_progress",
-      "state": "pr_open",
+      "status": "merged",
+      "state": "merged",
       "events": [],
       "pr_number": 1,
+      "merged_at": "2026-06-01T02:14:47Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/1",
       "claimed_by": "ShingShen2003"
     },
