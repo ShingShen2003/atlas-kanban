@@ -1,0 +1,21 @@
+{
+  "signoffs": {
+    "S3.1": {
+      "decision": "approved",
+      "decided_by": "shingshen@pisteyo.com",
+      "decided_at": "2026-06-01T02:17:28.240465+00:00",
+      "all_pass": true,
+      "criteria": [
+        {
+          "key": "dc78a061c5b176ce",
+          "verdict": "pass"
+        },
+        {
+          "key": "dd5858ebcdfbd035",
+          "verdict": "pass"
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-06-01T02:17:28.503577+00:00"
+}
