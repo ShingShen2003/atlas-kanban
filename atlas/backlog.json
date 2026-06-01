@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T04:23:53.206Z",
+  "generated_at": "2026-06-01T04:34:24.861Z",
   "modules": [
     {
       "id": "M1",
@@ -88,7 +88,7 @@
         "A user can delete a card"
       ],
       "status": "merged",
-      "state": "in_review",
+      "state": "verified",
       "depends_on": [
         "S1.2",
         "S1.3"
@@ -97,11 +97,7 @@
       "merged_at": "2026-06-01T04:23:27Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/4",
       "claimed_by": "ShingShen2003",
-      "actual_ai_hours": 0.06,
-      "needs_human_review": {
-        "kind": "qa",
-        "since": "2026-06-01T04:23:53.206Z"
-      }
+      "actual_ai_hours": 0.06
     },
     {
       "id": "S2.2",
