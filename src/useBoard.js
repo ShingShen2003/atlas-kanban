@@ -6,6 +6,15 @@ const STORAGE_KEY = 'atlas-kanban-board'
 export const COLUMNS = ['To Do', 'Doing', 'Done']
 export const PRIORITIES = ['high', 'medium', 'low']
 
+// S2.2 — the neighbouring column along COLUMNS in direction `dir`
+// (-1 = left, +1 = right), or null when already at an edge.
+export function adjacentColumn(column, dir) {
+  const i = COLUMNS.indexOf(column)
+  if (i < 0) return null
+  const j = i + dir
+  return j >= 0 && j < COLUMNS.length ? COLUMNS[j] : null
+}
+
 function loadBoard() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
