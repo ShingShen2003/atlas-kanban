@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T16:27:00.567Z",
+  "generated_at": "2026-06-01T16:27:52.020Z",
   "modules": [
     {
       "id": "M1",
@@ -219,11 +219,11 @@
         "S2.1",
         "S2.4"
       ],
-      "pr_number": 14,
-      "merged_at": "2026-06-01T16:18:55Z",
-      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/14",
+      "pr_number": 15,
+      "merged_at": "2026-06-01T16:27:14Z",
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/15",
       "claimed_by": "ShingShen2003",
-      "actual_ai_hours": 0.02
+      "actual_ai_hours": 0.01
     },
     {
       "id": "S2.5",
@@ -430,9 +430,9 @@
       "status": "merged",
       "state": "merged",
       "events": [],
-      "pr_number": 14,
-      "merged_at": "2026-06-01T16:18:55Z",
-      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/14",
+      "pr_number": 15,
+      "merged_at": "2026-06-01T16:27:14Z",
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/15",
       "claimed_by": "ShingShen2003"
     },
     {
