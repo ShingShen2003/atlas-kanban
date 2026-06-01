@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T04:49:08.861Z",
+  "generated_at": "2026-06-01T04:49:37.961Z",
   "modules": [
     {
       "id": "M1",
@@ -121,7 +121,7 @@
       "actual_ai_hours": 0.01,
       "needs_human_review": {
         "kind": "qa",
-        "since": "2026-06-01T04:49:08.861Z"
+        "since": "2026-06-01T04:49:37.961Z"
       }
     },
     {
@@ -146,7 +146,7 @@
       "actual_ai_hours": 0.01,
       "needs_human_review": {
         "kind": "qa",
-        "since": "2026-06-01T04:49:08.861Z"
+        "since": "2026-06-01T04:49:37.961Z"
       }
     },
     {
@@ -159,11 +159,13 @@
         "A search box filters cards by title across all columns",
         "Clearing the search restores all cards"
       ],
-      "status": "pending",
-      "state": "queued",
+      "status": "in_progress",
+      "state": "working",
       "depends_on": [
         "S2.1"
-      ]
+      ],
+      "claimed_by": "atlas-bot",
+      "worktree_branch": "feat/S2.4-search-and-filter-cards"
     },
     {
       "id": "S3.1",
@@ -305,9 +307,11 @@
       "title": "Search box + filter logic",
       "module": "Board",
       "phase": 2,
-      "status": "pending",
-      "state": "queued",
-      "events": []
+      "status": "in_progress",
+      "state": "working",
+      "events": [],
+      "claimed_by": "atlas-bot",
+      "worktree_branch": "feat/S2.4-search-and-filter-cards"
     },
     {
       "id": "T3.1.1",
