@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T04:46:11.377Z",
+  "generated_at": "2026-06-01T04:46:36.900Z",
   "modules": [
     {
       "id": "M1",
@@ -109,14 +109,20 @@
         "A card can move left/right between columns",
         "The card's column persists after reload"
       ],
-      "status": "in_progress",
-      "state": "pr_open",
+      "status": "merged",
+      "state": "in_review",
       "depends_on": [
         "S2.1"
       ],
       "pr_number": 5,
+      "merged_at": "2026-06-01T04:46:26Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/5",
-      "claimed_by": "ShingShen2003"
+      "claimed_by": "ShingShen2003",
+      "actual_ai_hours": 0.01,
+      "needs_human_review": {
+        "kind": "qa",
+        "since": "2026-06-01T04:46:36.900Z"
+      }
     },
     {
       "id": "S2.3",
@@ -262,10 +268,11 @@
       "title": "Move-card controls + persistence",
       "module": "Board",
       "phase": 2,
-      "status": "in_progress",
-      "state": "pr_open",
+      "status": "merged",
+      "state": "merged",
       "events": [],
       "pr_number": 5,
+      "merged_at": "2026-06-01T04:46:26Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/5",
       "claimed_by": "ShingShen2003"
     },
