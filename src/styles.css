@@ -64,6 +64,23 @@ body { margin: 0; background: #f5f5fb; }
   justify-content: space-between;
   gap: 0.5rem;
 }
+.card-priority {
+  font: inherit;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border: 1px solid #cdc4f5;
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #fff;
+  color: #6c5ce7;
+}
+.card-priority.priority-high { color: #e74c3c; border-color: #f3b8b1; }
+.card-priority.priority-medium { color: #6c5ce7; border-color: #cdc4f5; }
+.card-priority.priority-low { color: #00b894; border-color: #9be4d2; }
 .card-moves { display: flex; gap: 0.25rem; margin-left: auto; }
 .card-move {
   border: 1px solid #e5e7eb;
