@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T15:59:23.962Z",
+  "generated_at": "2026-06-01T15:59:59.349Z",
   "modules": [
     {
       "id": "M1",
@@ -188,12 +188,13 @@
         "Each column header shows a live count of its cards"
       ],
       "status": "in_progress",
-      "state": "working",
+      "state": "pr_open",
       "depends_on": [
         "S2.2"
       ],
-      "claimed_by": "atlas-bot",
-      "worktree_branch": "feat/S3.2-board-stats-counts"
+      "pr_number": 12,
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/12",
+      "claimed_by": "ShingShen2003"
     },
     {
       "id": "S3.3",
@@ -397,10 +398,11 @@
       "module": "Polish",
       "phase": 3,
       "status": "in_progress",
-      "state": "working",
+      "state": "pr_open",
       "events": [],
-      "claimed_by": "atlas-bot",
-      "worktree_branch": "feat/S3.2-board-stats-counts"
+      "pr_number": 12,
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/12",
+      "claimed_by": "ShingShen2003"
     },
     {
       "id": "T3.3.1",
