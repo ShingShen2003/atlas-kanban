@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T04:13:59.190Z",
+  "generated_at": "2026-06-01T04:15:04.617Z",
   "modules": [
     {
       "id": "M1",
@@ -65,11 +65,13 @@
         "Cards have id, title, column, priority fields",
         "Board state persists across reloads via localStorage"
       ],
-      "status": "pending",
-      "state": "queued",
+      "status": "in_progress",
+      "state": "working",
       "depends_on": [
         "S1.1"
-      ]
+      ],
+      "claimed_by": "atlas-bot",
+      "worktree_branch": "feat/S1.3-card-model-localstorage"
     },
     {
       "id": "S2.1",
@@ -221,9 +223,11 @@
       "title": "Card model + localStorage hook",
       "module": "Foundation",
       "phase": 1,
-      "status": "pending",
-      "state": "queued",
-      "events": []
+      "status": "in_progress",
+      "state": "working",
+      "events": [],
+      "claimed_by": "atlas-bot",
+      "worktree_branch": "feat/S1.3-card-model-localstorage"
     },
     {
       "id": "T2.1.1",
