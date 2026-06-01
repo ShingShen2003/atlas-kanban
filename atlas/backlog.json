@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T14:30:49.554Z",
+  "generated_at": "2026-06-01T14:31:23.842Z",
   "modules": [
     {
       "id": "M1",
@@ -121,7 +121,7 @@
       "actual_ai_hours": 0.01,
       "needs_human_review": {
         "kind": "qa",
-        "since": "2026-06-01T14:30:49.554Z"
+        "since": "2026-06-01T14:31:23.841Z"
       }
     },
     {
@@ -146,7 +146,7 @@
       "actual_ai_hours": 0.01,
       "needs_human_review": {
         "kind": "qa",
-        "since": "2026-06-01T14:30:49.554Z"
+        "since": "2026-06-01T14:31:23.842Z"
       }
     },
     {
@@ -171,7 +171,7 @@
       "actual_ai_hours": 0.01,
       "needs_human_review": {
         "kind": "qa",
-        "since": "2026-06-01T14:30:49.554Z"
+        "since": "2026-06-01T14:31:23.842Z"
       }
     },
     {
@@ -258,8 +258,41 @@
       "actual_ai_hours": 0.02,
       "needs_human_review": {
         "kind": "qa",
-        "since": "2026-06-01T14:30:49.554Z"
+        "since": "2026-06-01T14:31:23.842Z"
       }
+    },
+    {
+      "id": "S1.4",
+      "title": "Reconciler ignores atlas:backlog-change PRs in state overlay",
+      "module": "Foundation",
+      "phase": 1,
+      "ui": false,
+      "acceptance": [
+        "An atlas:backlog-change PR does not advance the referenced story past queued",
+        "A real feature PR for a story still advances its state",
+        "Adding a story via atlas-update leaves it queued until a feature PR lands"
+      ],
+      "status": "merged",
+      "state": "merged",
+      "depends_on": [],
+      "evolution_log": [
+        {
+          "timestamp": "2026-06-01T14:29:59.772Z",
+          "operation": "add",
+          "by": "ShingShen2003",
+          "reason": "S2.5 (added via atlas-update for drag-and-drop) jumped straight to in_review: the reconciler matched the backlog-change PR — which references S2.5 in its title — as if it were S2.5's implementation PR. Any story added mid-flight mis-states this way. Teaching the reconciler to ignore plan-change PRs keeps added stories queued until real code ships.",
+          "changes": {
+            "added": "→ S1.4 (reconciler backlog-change exclusion; ui:false)"
+          },
+          "pr_url": null,
+          "pr_number": null
+        }
+      ],
+      "pr_number": 9,
+      "merged_at": "2026-06-01T14:31:08Z",
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/9",
+      "claimed_by": "ShingShen2003",
+      "actual_ai_hours": 0.01
     }
   ],
   "tasks": [
@@ -431,6 +464,20 @@
       "pr_number": 8,
       "merged_at": "2026-06-01T14:22:05Z",
       "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/8",
+      "claimed_by": "ShingShen2003"
+    },
+    {
+      "id": "T1.4.1",
+      "story_id": "S1.4",
+      "title": "Exclude atlas:backlog-change PRs + atlas-update branches from reconciler matching",
+      "module": "Foundation",
+      "phase": 1,
+      "status": "merged",
+      "state": "merged",
+      "events": [],
+      "pr_number": 9,
+      "merged_at": "2026-06-01T14:31:08Z",
+      "pr_url": "https://github.com/ShingShen2003/atlas-kanban/pull/9",
       "claimed_by": "ShingShen2003"
     }
   ]
