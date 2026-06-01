@@ -52,6 +52,14 @@ body { margin: 0; background: #f5f5fb; }
   padding: 0.5rem 0.6rem;
   font-size: 0.9rem;
 }
+.card[draggable='true'] { cursor: grab; }
+.card[draggable='true']:active { cursor: grabbing; }
+.card-dragging { opacity: 0.5; }
+.column-dragover {
+  outline: 2px dashed #6c5ce7;
+  outline-offset: 2px;
+  background: #f3f0ff;
+}
 .card-main {
   display: flex;
   align-items: flex-start;
