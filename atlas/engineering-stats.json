@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-06-07T23:35:19.180Z",
+  "generated_at": "2026-06-08T02:00:11.348Z",
   "loc": {
     "total_net": 1843,
-    "last_7d_net": 1843,
+    "last_7d_net": 778,
     "last_24h_net": 0,
     "total_additions": 1905,
     "total_deletions": 62,
-    "last_7d_additions": 1905,
+    "last_7d_additions": 840,
     "last_24h_additions": 0,
-    "per_day_7d_net": 263
+    "per_day_7d_net": 111
   },
   "merges": {
     "total": 0,
